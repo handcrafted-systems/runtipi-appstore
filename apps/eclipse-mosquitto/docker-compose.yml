@@ -1,0 +1,22 @@
+services:
+  eclipse-mosquitto:
+    image: eclipse-mosquitto:2.0.21
+    container_name: eclipse-mosquitto
+    environment:
+      - TZ=${TZ}
+      - MQTT_DYNSEC_ADMIN_USER=admin
+      - MQTT_DYNSEC_ADMIN_PASSWORD=${MQTT_ADMIN_PASSWORD}
+    ports:
+      - 1883:1883
+    command: ['/dynsec-setup.sh', '/usr/sbin/mosquitto', '-c', '/mosquitto/config/mosquitto.conf']
+    expose:
+      - 1883
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/mosquitto/data
+      - ${APP_DATA_DIR}/data/config:/mosquitto/config
+      - ${APP_DATA_DIR}/data/scripts/dynsec-setup.sh:/dynsec-setup.sh
+    restart: unless-stopped
+    networks:
+      - tipi_main_network
+    labels:
+      runtipi.managed: true
