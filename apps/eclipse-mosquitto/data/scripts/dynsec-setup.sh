@@ -15,20 +15,20 @@
 # Setup Script to be executed in a Docker Init Container
 
 # Set Default Admin Credentials for Dynamic Security Plugin Configuration
-#DEFAULT_DYNSEC_ADMIN=admin
-#DEFAULT_DYNSEC_PASSWORD=securePassword
-#DYNSEC_FILE_PATH=/mosquitto/config/dynamic-security.json
+DEFAULT_DYNSEC_ADMIN=admin
+DEFAULT_DYNSEC_PASSWORD=securePassword
+DYNSEC_FILE_PATH=/mosquitto/config/dynamic-security.json
 
 # Set values if provided via Environment Variables in the Docker Init Container
-#MQTT_DYNSEC_ADMIN_USER=${MQTT_DYNSEC_ADMIN_USER:-$DEFAULT_DYNSEC_ADMIN}
-#MQTT_DYNSEC_ADMIN_PASSWORD=${MQTT_DYNSEC_ADMIN_PASSWORD:-$DEFAULT_DYNSEC_PASSWORD}
+MQTT_DYNSEC_ADMIN_USER=${MQTT_DYNSEC_ADMIN_USER:-$DEFAULT_DYNSEC_ADMIN}
+MQTT_DYNSEC_ADMIN_PASSWORD=${MQTT_DYNSEC_ADMIN_PASSWORD:-$DEFAULT_DYNSEC_PASSWORD}
 
 # echo "Admin/Pass: ${MQTT_DYNSEC_ADMIN_USER}/${MQTT_DYNSEC_ADMIN_PASSWORD}" ## DEBUG
 
 # Set the Admin Credentials for RBAC control via Dyamic Security Plugin
-#mosquitto_ctrl dynsec init ${DYNSEC_FILE_PATH} ${MQTT_DYNSEC_ADMIN_USER} ${MQTT_DYNSEC_ADMIN_PASSWORD}
+mosquitto_ctrl dynsec init ${DYNSEC_FILE_PATH} ${MQTT_DYNSEC_ADMIN_USER} ${MQTT_DYNSEC_ADMIN_PASSWORD}
 
-#chmod 700 ${DYNSEC_FILE_PATH}
-#chown 1883:1883 ${DYNSEC_FILE_PATH}
+chmod 700 ${DYNSEC_FILE_PATH}
+chown 1883:1883 ${DYNSEC_FILE_PATH}
 
-#exec "$@"
+exec "$@"
