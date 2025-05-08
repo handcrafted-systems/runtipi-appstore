@@ -18,10 +18,10 @@ protocol websockets
 WebSockets, while powerful, can introduce vulnerabilities if left unsecured. They should be secured using TLS/encryption.
 For more detailed information the [mosquitto documentation](https://mosquitto.org/man/mosquitto-conf-5.html). 
 
-### See the man page for MQTT Authentication methods here:
+### Authentication method to connect to MQTT broker from other services/devices:
 
-- Mosquitto documentation: [https://mosquitto.org/documentation/authentication-methods/](https://mosquitto.org/documentation/authentication-methods/)
-
+Username: admin
+Password: Entered during setup (before Install)
 
 ## Links
 
