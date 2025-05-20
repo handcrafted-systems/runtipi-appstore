@@ -14,16 +14,6 @@
   "author": "Eclipse Foundation",
   "source": "https://github.com/eclipse/mosquitto/",
   "website": "https://mosquitto.org/",
-  "form_fields": [
-    {
-      "type": "password",
-      "label": "MQTT Broker Admin Password",
-      "max": 50,
-      "min": 6,
-      "required": true,
-      "env_variable": "MQTT_ADMIN_PASSWORD"
-    }
-  ],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1691943801422,
   "updated_at": 1741303868000
