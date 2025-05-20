@@ -6,6 +6,7 @@ services:
       - TZ=${TZ}
     ports:
       - 1883:1883
+      - 9001:9001
     command: ['/usr/sbin/mosquitto', '-c', '/mosquitto/config/mosquitto.conf']
     expose:
       - 1883
