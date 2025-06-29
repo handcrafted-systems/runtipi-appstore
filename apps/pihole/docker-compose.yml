@@ -2,7 +2,7 @@ version: '3.7'
 services:
   pihole:
     container_name: pihole
-    image: pihole/pihole:2025.05.1
+    image: pihole/pihole:2025.06.2
     restart: unless-stopped
     hostname: pihole
     dns:
@@ -22,23 +22,4 @@ services:
     networks:
       - tipi_main_network
     labels:
-      traefik.enable: true
-      traefik.http.middlewares.pihole-web-redirect.redirectscheme.scheme: https
-      traefik.http.services.pihole.loadbalancer.server.port: 80
-      traefik.http.routers.pihole-insecure.rule: Host(`${APP_DOMAIN}`)
-      traefik.http.routers.pihole-insecure.entrypoints: web
-      traefik.http.routers.pihole-insecure.service: pihole
-      traefik.http.routers.pihole-insecure.middlewares: pihole-web-redirect
-      traefik.http.routers.pihole.rule: Host(`${APP_DOMAIN}`)
-      traefik.http.routers.pihole.entrypoints: websecure
-      traefik.http.routers.pihole.service: pihole
-      traefik.http.routers.pihole.tls.certresolver: myresolver
-      traefik.http.routers.pihole-local-insecure.rule: Host(`pihole.${LOCAL_DOMAIN}`)
-      traefik.http.routers.pihole-local-insecure.entrypoints: web
-      traefik.http.routers.pihole-local-insecure.service: pihole
-      traefik.http.routers.pihole-local-insecure.middlewares: pihole-web-redirect
-      traefik.http.routers.pihole-local.rule: Host(`pihole.${LOCAL_DOMAIN}`)
-      traefik.http.routers.pihole-local.entrypoints: websecure
-      traefik.http.routers.pihole-local.service: pihole
-      traefik.http.routers.pihole-local.tls: true
       runtipi.managed: true
