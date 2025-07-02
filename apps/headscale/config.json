@@ -6,7 +6,7 @@
   "no_gui": true,
   "port": 27896,
   "id": "headscale",
-  "tipi_version": 1,
+  "tipi_version": 2,
   "version": "0.26.1",
   "categories": ["network", "security"],
   "description": "Low-config VPN. Installs on any device in minutes, manages firewall rules for you, and works from anywhere.",
