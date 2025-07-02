@@ -4,7 +4,7 @@
   "available": true,
   "exposable": true,
   "no_gui": true,
-  "port": 8080,
+  "port": 27896,
   "id": "headscale",
   "tipi_version": 1,
   "version": "0.26.1",
@@ -16,5 +16,5 @@
   "website": "https://headscale.net/",
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1751475016000,
-  "updated_at": 1751475016000
+  "updated_at": 1751477860000
 }
