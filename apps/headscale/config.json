@@ -2,7 +2,7 @@
   "$schema": "../app-info-schema.json",
   "name": "Headscale",
   "available": true,
-  "exposable": true,
+  "exposable": false,
   "no_gui": true,
   "port": 27896,
   "id": "headscale",
