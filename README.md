@@ -1,28 +1,33 @@
 ## Handcrafted Systems Runtipi App Store
 
-Intended for users looking to have a self-hosted home automation system based on:
+Intended for users looking to have a self-hosted home automation system
 
-- Network Layer
-  
-  - Zigbee
-  - Zigbee2MQTT
-  - MQTT
+### Network Layer
+| Name             | Type     | Config             | Port(s)       |
+|------------------|----------|--------------------|---------------|
+|  Zigbee          | Hardware | Pass-through       | /dev/ttyACM0  |
+|  Zigbee2MQTT     | Docker   | RTP migrated       | 8290          |
+|  MQTT            | Docker   | RTP handcraftedsys | 1883          |
 
-- Automation Layer
+### Automation Layer
+| Name             | Type     | Config             | Port(s)       |
+|------------------|----------|--------------------|---------------|
+| openHAB          | Service  | /etc/openhab UI    | 8080          |
+| ESPHome          | TBD      | TBD                | TBD           |
+| Home Assistant   | TBD      | TBD                | TBD           |
 
-  - openHAB
-  - ESPHome
-  - Home Assistant
+### Application Layer
+| Name             | Type     | Config             | Port(s)       |
+|------------------|----------|--------------------|---------------|
+| Caddy            | Service  | /etc/caddy *.caddy | 80,443        |
+| Pi-hole          | Docker   | RTP handcraftedsys | 53            |        
 
-- Application Layer
-
-  - Caddy
-  - Pi-hole
-
-- Privacy Layer
-
-  - Headscale
-  - Tailscale
+### Security Layer
+| Name             | Type     | Config             | Port(s)       |
+|------------------|----------|--------------------|---------------|
+| acme.sh          | Crontab  | ~/.acme.sh /certs  | N/A           |
+| Headscale        | Docker   | RTP handcraftedsys | 27896,9090    |
+| Tailscale        | Service  | cmdline            | N/A           |
 
 ## Repository Structure
 
