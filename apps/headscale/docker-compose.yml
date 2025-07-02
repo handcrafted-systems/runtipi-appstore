@@ -1,6 +1,6 @@
 services:
   headscale:
-    image: docker.io/headscale/headscale:v0.26.1
+    image: headscale/headscale:v0.26.1
     restart: unless-stopped
     container_name: headscale
     ports:
