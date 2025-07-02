@@ -3,33 +3,44 @@
 Intended for users looking for a privacy-focused, self-hosted home automation system
 
 ### Network Layer
-| Name             | Type     | Config             | Port(s)       |
-|:-----------------|:---------|:-------------------|:--------------|
-| Zigbee           | Hardware | Pass-through       | /dev/ttyACM0  |
-| Zigbee2MQTT      | Docker   | RTP migrated       | 8290          |
-| MQTT             | Docker   | RTP handcraftedsys | 1883,9001     |
-| Pi-hole          | Docker   | RTP handcraftedsys | 53            |
+| Name             | Purpose                       | Type     | Config             | Port(s)       |
+|:-----------------|:------------------------------|:---------|:-------------------|:--------------|
+| Zigbee           | Sensor & trigger connectivity | Hardware | Pass-through       | /dev/ttyACM0  |
+| Zigbee2MQTT      | MQTT translation + Admin      | Docker   | RTP migrated       | 8290          |
+| MQTT             | Pub/Sub                       | Docker   | RTP handcraftedsys | 1883,9001     |
+| Pi-hole          | Local DNS + Ad-blocking       | Docker   | RTP handcraftedsys | 53            |
 
 ### Security Layer
-| Name             | Type     | Config             | Port(s)       |
-|:-----------------|:---------|:-------------------|:--------------|
-| acme.sh          | Crontab  | ~/.acme.sh /certs  | N/A           |
-| Headscale        | Docker   | RTP handcraftedsys | 27896,9090    |
-| Tailscale        | Service  | cmdline            | N/A           |
+| Name             | Purpose                       | Type     | Config             | Port(s)       |
+|:-----------------|:------------------------------|:---------|:-------------------|:--------------|
+| acme.sh          | Local HTTPS                   | Crontab  | ~/.acme.sh /certs  | N/A           |
+| Headscale        | Tailscale control server      | Docker   | RTP handcraftedsys | 27896,9090    |
+| Tailscale        | Pi-hole Tailnet inclusion     | Service  | cmdline            | N/A           |
 
 ### Application Layer
 #### Server
-| Name             | Type     | Config             | Port(s)       |
-|:-----------------|:---------|:-------------------|:--------------|
-| Caddy            | Service  | /etc/caddy *.caddy | 80,443        |
-| DuckDNS          | Docker   | RTP migrated       | N/A           |
+| Name             | Purpose                       | Type     | Config             | Port(s)       |
+|:-----------------|:------------------------------|:---------|:-------------------|:--------------|
+| Caddy            | Reverse-proxy                 | Service  | /etc/caddy *.caddy | 80,443        |
+| DuckDNS          | Dynamic DNS                   | Docker   | RTP migrated       | N/A           |
 
 #### Automation
-| Name             | Type     | Config             | Port(s)       |
-|:-----------------|:---------|:-------------------|:--------------|
-| openHAB          | Service  | /etc/openhab UI    | 8080          |
-| ESPHome          | TBD      | TBD                | TBD           |
-| Home Assistant   | TBD      | TBD                | TBD           |
+| Name             | Purpose                       | Type     | Config             | Port(s)       |
+|:-----------------|:------------------------------|:---------|:-------------------|:--------------|
+| openHAB          | Rules, scenes, history        | Service  | /etc/openhab UI    | 8080          |
+| ESPHome          | Custom IoT hardware           | TBD      | TBD                | TBD           |
+| Home Assistant   | Rules, scenes, history        | TBD      | TBD                | TBD           |
+
+### Upcoming
+| Name             | Purpose                       | Type     | Config             | Port(s)       |
+|:-----------------|:------------------------------|:---------|:-------------------|:--------------|
+| raspiBackup      | Scheduled back-ups            | Cron     | TBD                | TBD           |
+| Gotify / ntfy    | Notifications                 | TBD      | TBD                | TBD           |
+| Uptime Kuma      | Service monitoring & alerts   | Docker   | TBD                | TBD           |
+| TriliumNext      | Notes, diagrams & more        | Docker   | TBD                | TBD           |
+| Authentik        | Identity provider             | TBD      | TBD                | TBD           |
+| Keepalived       | High-availability             | Service  | TBD                | TBD           |
+
 
 ## Repository Structure
 
