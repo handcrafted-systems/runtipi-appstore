@@ -22,6 +22,7 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name             | Purpose                       | Type     | Config             | Port(s)       |
 |:-----------------|:------------------------------|:---------|:-------------------|:--------------|
 | Caddy            | Reverse-proxy                 | Service  | /etc/caddy *.caddy | 80,443        |
+| Runtipi          | App store                     | Docker   | ~/runtipi          | 9079,9443     |
 | DuckDNS          | Dynamic DNS                   | Docker   | RTP migrated       | N/A           |
 
 #### Automation
