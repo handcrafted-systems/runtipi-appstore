@@ -6,10 +6,6 @@
       "image": "caronc/apprise:1.2",
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/apprise_api",
-          "containerPath": "/opt/apprise/webapp"
-        },
-        {
           "hostPath": "${APP_DATA_DIR}/data/config",
           "containerPath": "/config"
         },

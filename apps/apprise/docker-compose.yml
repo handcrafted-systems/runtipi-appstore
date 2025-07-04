@@ -9,7 +9,6 @@ services:
       - APPRISE_STATEFUL_MODE=simple
       - APPRISE_WORKER_COUNT=1
     volumes:
-      - ${APP_DATA_DIR}/data/apprise_api:/opt/apprise/webapp:ro
       - ${APP_DATA_DIR}/data/config:/config:rw
       - ${APP_DATA_DIR}/data/plugin:/plugin:rw
       - ${APP_DATA_DIR}/data/attach:/attach:rw
