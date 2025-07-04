@@ -1,0 +1,20 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "Apprise",
+  "available": true,
+  "exposable": false,
+  "no_gui": false,
+  "port": 8000,
+  "id": "apprise",
+  "tipi_version": 1,
+  "version": "1.2",
+  "categories": ["utilities", "automation"],
+  "description": "Apprise allows you to send a notification to almost all of the most popular notification services available to us today such as: WhatsApp, MQTT, Discord, Slack, Gotify, etc.",
+  "short_desc": "Apprise API was designed to easily fit into eco-systems that are looking for a simple notification solution.",
+  "author": "Apprise",
+  "source": "https://github.com/caronc/apprise",
+  "website": "https://github.com/caronc/apprise-api",
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1751475016000,
+  "updated_at": 1751475016000
+}

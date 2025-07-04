@@ -1,0 +1,17 @@
+services:
+  apprise:
+    image: caronc/apprise:1.2
+    restart: unless-stopped
+    container_name: apprise
+    ports:
+      - ${APP_PORT}:8000
+    environment:
+      - APPRISE_STATEFUL_MODE=simple
+      - APPRISE_WORKER_COUNT=1
+    volumes:
+      - ${APP_DATA_DIR}/data/apprise_api:/opt/apprise/webapp:ro
+      - ${APP_DATA_DIR}/data/config:/config:rw
+      - ${APP_DATA_DIR}/data/plugin:/plugin:rw
+      - ${APP_DATA_DIR}/data/attach:/attach:rw
+    networks:
+      - tipi_main_network

@@ -1,0 +1,33 @@
+{
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "apprise",
+      "image": "caronc/apprise:1.2",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/apprise_api",
+          "containerPath": "/opt/apprise/webapp"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/config"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/plugin",
+          "containerPath": "/plugin"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/attach",
+          "containerPath": "/attach"
+        }
+      ],
+      "addPorts": [
+        {
+          "hostPort": 8000,
+          "containerPort": 8000
+        }
+      ]
+    }
+  ]
+}
