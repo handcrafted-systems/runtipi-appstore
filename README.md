@@ -15,7 +15,7 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 |:--------------------|:------------------------------|:----------|:-------------------|:--------------|
 | acme.sh             | Local HTTPS                   | Crontab   | ~/.acme.sh /certs  | N/A           |
 | Headscale           | Tailscale control server      | Container | RTP handcraftedsys | 27896,9090    |
-| Tailscale           | Pi-hole Tailnet inclusion     | Service   | cmdline            | N/A           | 
+| Tailscale           | Pi-hole Tailnet inclusion     | Service   | cmdline            | N/A           |
 
 ### Application Layer
 #### Server
@@ -23,20 +23,20 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 |:--------------------|:------------------------------|:----------|:-------------------|:--------------|
 | Caddy               | Reverse-proxy                 | Service   | /etc/caddy *.caddy | 80,443        |
 | Runtipi             | App store                     | Container | ~/runtipi          | 9079,9443     |
-| DuckDNS             | Dynamic DNS                   | Container | RTP migrated       | N/A           | 
+| DuckDNS             | Dynamic DNS                   | Container | RTP migrated       | N/A           |
+| Apprise             | Notifications                 | Container | RTP handcraftedsys | 8000          |
 
 #### Automation
 | Name                | Purpose                       | Type      | Config             | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------------|
 | openHAB             | Rules, scenes, history        | Service   | /etc/openhab UI    | 8080          |
 | ESPHome             | Custom IoT hardware           | TBD       | TBD                | TBD           |
-| Home Assistant      | Rules, scenes, history        | TBD       | TBD                | TBD           | 
+| Home Assistant      | Rules, scenes, history        | TBD       | TBD                | TBD           |
 
 ### Upcoming
 | Name                | Purpose                       | Type      | Config             | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------------|
 | raspiBackup         | Scheduled back-ups            | Cron      | TBD                | TBD           |
-| Apprise             | Notifications                 | Container | TBD                | TBD           |
 | Uptime Kuma         | Service monitoring & alerts   | Container | TBD                | TBD           |
 | TriliumNext         | Notes, diagrams & more        | Container | TBD                | TBD           |
 | Authentik/Pocket-ID | OIDC provider                 | TBD       | TBD                | TBD           |
