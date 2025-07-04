@@ -36,7 +36,7 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name                | Purpose                       | Type      | Config             | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------------|
 | raspiBackup         | Scheduled back-ups            | Cron      | TBD                | TBD           |
-| Gotify/ntfy         | Notifications                 | TBD       | TBD                | TBD           |
+| Apprise             | Notifications                 | Container | TBD                | TBD           |
 | Uptime Kuma         | Service monitoring & alerts   | Container | TBD                | TBD           |
 | TriliumNext         | Notes, diagrams & more        | Container | TBD                | TBD           |
 | Authentik/Pocket-ID | OIDC provider                 | TBD       | TBD                | TBD           |
