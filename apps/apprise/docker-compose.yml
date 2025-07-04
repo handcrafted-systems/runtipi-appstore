@@ -6,6 +6,8 @@ services:
     ports:
       - ${APP_PORT}:8000
     environment:
+      - PUID=0
+      - PGID=0
       - APPRISE_STATEFUL_MODE=simple
       - APPRISE_WORKER_COUNT=1
     volumes:
