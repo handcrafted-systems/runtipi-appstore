@@ -25,6 +25,7 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Runtipi             | App store                     | Container | ~/runtipi          | 9079,9443     |
 | DuckDNS             | Dynamic DNS                   | Container | RTP migrated       | N/A           |
 | Apprise             | Notifications                 | Container | RTP handcraftedsys | 8000          |
+| Uptime Kuma         | Service monitoring & alerts   | Container | RTP handcraftedsys | 8125          |
 
 #### Automation
 | Name                | Purpose                       | Type      | Config             | Port(s)       |
@@ -37,7 +38,6 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name                | Purpose                       | Type      | Config             | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------------|
 | raspiBackup         | Scheduled back-ups            | Cron      | TBD                | TBD           |
-| Uptime Kuma         | Service monitoring & alerts   | Container | TBD                | TBD           |
 | TriliumNext         | Notes, diagrams & more        | Container | TBD                | TBD           |
 | Authentik/Pocket-ID | OIDC provider                 | TBD       | TBD                | TBD           |
 | Keepalived          | High-availability             | Service   | TBD                | TBD           |
