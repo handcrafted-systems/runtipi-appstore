@@ -17,7 +17,7 @@
                 "TRUST_PROXY": "true",
                 "PUID": "0",
                 "PGID": "0",
-                "ANALYTICS_DISABLED" : "true"
+                "ANALYTICS_DISABLED": "true"
             },
             "healthCheck": {
                 "test": [ "CMD", "/app/pocket-id", "healthcheck" ],
