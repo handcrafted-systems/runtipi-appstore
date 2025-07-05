@@ -33,7 +33,7 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | openHAB             | Rules, scenes, history        | Service   | /etc/openhab       | Both    | 8080          |
-| ESPHome             | Custom IoT hardware           | TBD       | TBD                | TBD     | TBD           |
+| ESPHome             | ESP32-based sensors/triggers  | TBD       | TBD                | TBD     | TBD           |
 | Home Assistant      | Rules, scenes, history        | TBD       | TBD                | TBD     | TBD           |
 
 ### Upcoming
