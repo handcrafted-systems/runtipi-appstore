@@ -1,14 +1,15 @@
 ## Handcrafted Systems
 
-Intended for users looking for a privacy-focused, self-hosted home automation system
+Intended for users looking for a privacy-focused, self-hosted, smart home system
 
 ### Hardware Layer
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
-| Raspberry Pi 5 Rec. | Accessible, mid-spec hub      | SBC       | raspi-config       | Both    | Eth/WiFi+USB  |
+| Raspberry Pi 5      | Mid-spec, accessible hub      | SBC       | Raspi OS Lite      | Both    | Eth/WiFi+USB  |
 | Zigbee              | Sensor & trigger connectivity | Dongle    | Pass-through       | N/A     | /dev/ttyACM0  |
 | Raspberry Pi 0 2W   | Core services fallback hub    | SBC       | dietpi             | CLI     | WiFi          |
-| Mini PC Opt.        | High-spec & -cost hub         | SBC       | Proxmox            | Both    | Eth/WiFi+USB  |
+| Mini PC (optional)  | High-spec, costly hub         | Mini PC   | Proxmox            | Both    | Eth/WiFi+USB  |
+| Old PC (optional)   | Mid/low-spec, but free        | PC        | Proxmox            | Both    | Eth/WiFi+USB  |
 
 ### Network Layer
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
