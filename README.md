@@ -17,7 +17,7 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Headscale           | Tailscale control server      | Container | RTP handcraftedsys | CLI*    | 27896,9090    |
 | Tailscale           | Pi-hole Tailnet inclusion     | Service   | cmdline            | CLI     | N/A           |
 
-<sub><sup>* GUI to be added (Headplane / Headscale-UI)</sup></sub>
+<sup>* GUI to be added (Headplane / Headscale-UI)</sup>
 
 ### Application Layer
 #### Server
@@ -32,9 +32,11 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 #### Automation
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
-| openHAB             | Rules, scenes, history        | Service   | /etc/openhab       | Both    | 8080          |
+| openHAB             | Rules, scenes, history        | Service   | /etc/openhab       | Both*   | 8080          |
 | ESPHome             | ESP32-based sensors/triggers  | TBD       | TBD                | TBD     | TBD           |
 | Home Assistant      | Rules, scenes, history        | TBD       | TBD                | TBD     | TBD           |
+
+<sup>*Karaf console only accessible via CLI</sup>
 
 ### Upcoming
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
@@ -43,7 +45,20 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | TriliumNext         | Notes, diagrams & more        | Container | TBD                | GUI     | TBD           |
 | Authentik/Pocket-ID | OIDC provider                 | TBD       | TBD                | GUI     | TBD           |
 | Keepalived          | High-availability             | Service   | TBD                | CLI     | TBD           |
+| HomeBox             | Organising & tracking         | Container | RTP handcraftedsys | GUI     | TBD           |
 
+
+## Installation
+
+1. In the Runtipi dashboard, open `Settings` and go to the `App Stores` tab.
+2. Click `Add App Store`, fill in the form with `handcraftedsys` and the URL `https://github.com/handcrafted-systems/runtipi-appstore` then click `Submit`
+3. You can now go to the `App Store` page and select the one you just created from the dropdown.
+
+Follow the Documentation below for next steps!
+
+## Documentation
+
+Coming soon!
 
 ## Repository Structure
 
@@ -59,7 +74,3 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 - **tests/**: Contains test files for the app store
 
   - `apps.test.ts`: Test suite for validating apps
-
-## Documentation
-
-Coming soon!
