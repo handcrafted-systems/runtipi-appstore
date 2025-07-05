@@ -2,10 +2,17 @@
 
 Intended for users looking for a privacy-focused, self-hosted home automation system
 
+### Hardware Layer
+| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+|:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
+| Raspberry Pi 5 Rec. | Accessible, mid-spec hub      | SBC       | raspi-config       | Both    | Eth/WiFi+USB  |
+| Zigbee              | Sensor & trigger connectivity | Dongle    | Pass-through       | N/A     | /dev/ttyACM0  |
+| Raspberry Pi 0 2W   | Core services fallback hub    | SBC       | dietpi             | CLI     | WiFi          |
+| Mini PC Opt.        | High-spec & -cost hub         | SBC       | Proxmox            | Both    | Eth/WiFi+USB  |
+
 ### Network Layer
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
-| Zigbee              | Sensor & trigger connectivity | Hardware  | Pass-through       | N/A     | /dev/ttyACM0  |
 | Zigbee2MQTT         | MQTT translation + Admin      | Container | handcraftedsys     | GUI     | 8290          |
 | MQTT                | Pub/Sub                       | Container | handcraftedsys     | N/A     | 1883,9001     |
 | Pi-hole             | Local DNS + Ad-blocking       | Container | handcraftedsys     | GUI     | 8081          |
