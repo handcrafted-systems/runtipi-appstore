@@ -1,25 +1,26 @@
 ## Handcrafted Systems
 
-Intended for users looking for a privacy-focused, self-hosted, smart home system
+Intended for users looking for a privacy-focused, self-hosted, smart home system.
 
 ### Hardware Layer
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
-| Raspberry Pi 5      | Mid-spec, accessible hub      | SBC       | Raspi OS Lite      | Both    | Eth/WiFi+USB  |
-| Zigbee              | Sensor & trigger connectivity | Dongle    | Pass-through       | N/A     | /dev/ttyACM0  |
+| Raspberry Pi 5 (A)  | Mid-spec, accessible hub      | SBC       | Raspi OS Lite      | Both    | Eth/WiFi+USB  |
+| Mini PC (B)         | High-spec, costly hub         | Mini PC   | Proxmox            | Both    | Eth/WiFi+USB  |
+| Old PC (C)          | Mid/low-spec, but free        | PC        | Proxmox            | Both    | Eth/WiFi+USB  |
+| Zigbee Coordinator  | Sensor & trigger connectivity | Dongle    | Pass-through       | N/A     | /dev/ttyACM0  |
 | Raspberry Pi 0 2W   | Core services fallback hub    | SBC       | dietpi             | CLI     | WiFi          |
-| Mini PC (optional)  | High-spec, costly hub         | Mini PC   | Proxmox            | Both    | Eth/WiFi+USB  |
-| Old PC (optional)   | Mid/low-spec, but free        | PC        | Proxmox            | Both    | Eth/WiFi+USB  |
+| HDD/NVMe/SSD        | Shared storage with redunancy | DAS       | mount/fstab/samba  | Both    | USB/Eth       |
 
 ### Network Layer
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | Zigbee2MQTT         | MQTT translation + Admin      | Container | handcraftedsys     | GUI     | 8290          |
 | MQTT                | Pub/Sub                       | Container | handcraftedsys     | N/A     | 1883,9001     |
 | Pi-hole             | Local DNS + Ad-blocking       | Container | handcraftedsys     | GUI     | 8081          |
 
 ### Security Layer
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | acme.sh             | Local HTTPS                   | Crontab   | ~/.acme.sh /certs  | CLI     | N/A           |
 | Headscale           | Tailscale control server      | Container | handcraftedsys     | CLI*    | 27896,9090    |
@@ -29,21 +30,21 @@ Intended for users looking for a privacy-focused, self-hosted, smart home system
 
 ### Application Layer
 #### Server
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | Caddy               | Reverse-proxy                 | Service   | /etc/caddy *.caddy | GUI     | 80,443        |
 | Runtipi             | App store                     | Container | ~/runtipi          | Both    | 9079,9443     |
 | DuckDNS             | Dynamic DNS                   | Container | handcraftedsys     | N/A     | N/A           |
 
 #### Content
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | Apprise             | Notifications                 | Container | handcraftedsys     | Both    | 8000          |
 | Uptime Kuma         | Service monitoring & alerts   | Container | handcraftedsys     | GUI     | 8125          |
 | TriliumNext         | Notes, diagrams & more        | Container | handcraftedsys     | GUI     | 8267          |
 
 #### Automation
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | openHAB             | Rules, scenes, history        | Service   | /etc/openhab       | Both*   | 8080          |
 | ESPHome             | ESP32-based sensors/triggers  | TBD       | TBD                | TBD     | TBD           |
@@ -52,7 +53,7 @@ Intended for users looking for a privacy-focused, self-hosted, smart home system
 <sup>*Karaf console only accessible via CLI</sup>
 
 ### Upcoming
-| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | raspiBackup         | Scheduled back-ups            | Cron      | TBD                | CLI     | TBD           |
 | Authentik/Pocket-ID | OIDC provider                 | Container | handcraftedsys     | GUI     | 8387          |
