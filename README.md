@@ -6,15 +6,15 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | Zigbee              | Sensor & trigger connectivity | Hardware  | Pass-through       | N/A     | /dev/ttyACM0  |
-| Zigbee2MQTT         | MQTT translation + Admin      | Container | RTP handcraftedsys | GUI     | 8290          |
-| MQTT                | Pub/Sub                       | Container | RTP handcraftedsys | N/A     | 1883,9001     |
-| Pi-hole             | Local DNS + Ad-blocking       | Container | RTP handcraftedsys | GUI     | 8081          |
+| Zigbee2MQTT         | MQTT translation + Admin      | Container | handcraftedsys     | GUI     | 8290          |
+| MQTT                | Pub/Sub                       | Container | handcraftedsys     | N/A     | 1883,9001     |
+| Pi-hole             | Local DNS + Ad-blocking       | Container | handcraftedsys     | GUI     | 8081          |
 
 ### Security Layer
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | acme.sh             | Local HTTPS                   | Crontab   | ~/.acme.sh /certs  | CLI     | N/A           |
-| Headscale           | Tailscale control server      | Container | RTP handcraftedsys | CLI*    | 27896,9090    |
+| Headscale           | Tailscale control server      | Container | handcraftedsys     | CLI*    | 27896,9090    |
 | Tailscale           | Pi-hole Tailnet inclusion     | Service   | cmdline            | CLI     | N/A           |
 
 <sup>* GUI to be added (Headplane / Headscale-UI)</sup>
@@ -24,10 +24,15 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | Caddy               | Reverse-proxy                 | Service   | /etc/caddy *.caddy | GUI     | 80,443        |
-| Runtipi             | App store                     | Container | ~/runtipi          | GUI     | 9079,9443     |
-| DuckDNS             | Dynamic DNS                   | Container | RTP handcraftedsys | N/A     | N/A           |
-| Apprise             | Notifications                 | Container | RTP handcraftedsys | Both    | 8000          |
-| Uptime Kuma         | Service monitoring & alerts   | Container | RTP handcraftedsys | GUI     | 8125          |
+| Runtipi             | App store                     | Container | ~/runtipi          | Both    | 9079,9443     |
+| DuckDNS             | Dynamic DNS                   | Container | handcraftedsys     | N/A     | N/A           |
+
+#### Content
+| Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
+|:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
+| Apprise             | Notifications                 | Container | handcraftedsys     | Both    | 8000          |
+| Uptime Kuma         | Service monitoring & alerts   | Container | handcraftedsys     | GUI     | 8125          |
+| TriliumNext         | Notes, diagrams & more        | Container | handcraftedsys     | GUI     | 8267          |
 
 #### Automation
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
@@ -42,10 +47,10 @@ Intended for users looking for a privacy-focused, self-hosted home automation sy
 | Name                | Purpose                       | Type      | Config             | UI      | Port(s)       |
 |:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
 | raspiBackup         | Scheduled back-ups            | Cron      | TBD                | CLI     | TBD           |
-| TriliumNext         | Notes, diagrams & more        | Container | TBD                | GUI     | TBD           |
-| Authentik/Pocket-ID | OIDC provider                 | TBD       | TBD                | GUI     | TBD           |
+| Authentik/Pocket-ID | OIDC provider                 | Container | handcraftedsys     | GUI     | 8387          |
 | Keepalived          | High-availability             | Service   | TBD                | CLI     | TBD           |
-| HomeBox             | Organising & tracking         | Container | RTP handcraftedsys | GUI     | TBD           |
+| HomeBox             | Organising & tracking         | Container | handcraftedsys     | GUI     | TBD           |
+| Syncthing           | P2P file syncing              | Container | handcraftedsys     | GUI     | TBD           |
 
 
 ## Installation
