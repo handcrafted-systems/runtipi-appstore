@@ -20,7 +20,7 @@
         "ANALYTICS_DISABLED": "true"
       },
       "healthCheck": {
-        "test": ["CMD","/app/pocket-id","healthcheck"],
+        "test": "curl -f http://localhost:1411/healthz",
         "interval": "1m30s",
         "timeout": "5s",
         "retries": 2,
