@@ -1,0 +1,34 @@
+{
+  "name": "Pocket ID",
+  "id": "pocket-id",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 10,
+  "version": "v1.5.0",
+  "port": 8387,
+  "categories": [
+    "security"
+  ],
+  "description": "Pocket ID is a simple OIDC provider that allows users to authenticate with their passkeys to your services.",
+  "short_desc": "A simple and easy-to-use OIDC provider.",
+  "author": "pocket-id",
+  "source": "https://github.com/pocket-id/pocket-id",
+  "website": "https://pocket-id.org",
+  "form_fields": [
+    {
+      "type": "url",
+      "label": "Pocket ID App URL",
+      "placeholder": "https://id.user.cc.handcrafted.systems",
+      "required": true,
+      "env_variable": "POCKET_ID_APP_URL"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1746731782218,
+  "updated_at": 1751696145000,
+  "$schema": "../app-info-schema.json"
+}
