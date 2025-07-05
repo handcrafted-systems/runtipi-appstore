@@ -24,7 +24,7 @@
                 "interval": "1m30s",
                 "timeout": "5s",
                 "retries": 2,
-                "start_period": "10s"
+                "startPeriod": "10s"
             }
         }
     ]
