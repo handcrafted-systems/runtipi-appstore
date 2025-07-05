@@ -12,7 +12,7 @@ Are you looking for a privacy-focused, self-hosted, smart home system?
 - ❓ [FAQ](#-faq)
 - 🙏 [Acknowledgements](#-acknowledgements)
 - 🏗️ [Built With](#-built-with)
-- 💬 [Contact](#-contact))
+- 💬 [Contact](#-contact)
 
 ---
 
