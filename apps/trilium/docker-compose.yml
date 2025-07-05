@@ -1,0 +1,12 @@
+services:
+  trilium:
+    image: triliumnext/notes:v0.95.0
+    container_name: trilium
+    ports:
+      - ${APP_PORT}:8080
+    environment:
+      - TRILIUM_DATA_DIR=/home/node/trilium-data
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/node/trilium-data
+    networks:
+      - tipi_main_network
