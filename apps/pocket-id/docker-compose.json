@@ -15,8 +15,8 @@
       "environment": {
         "APP_URL": "${POCKET_ID_APP_URL}",
         "TRUST_PROXY": "true",
-        "PUID": "0",
-        "PGID": "0",
+        "PUID": "1000",
+        "PGID": "1000",
         "ANALYTICS_DISABLED": "true"
       },
       "healthCheck": {
