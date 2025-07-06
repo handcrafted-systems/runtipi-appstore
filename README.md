@@ -31,14 +31,14 @@ Are you looking for a privacy-focused, self-hosted, smart home system?
 ## 🔍 Overview
 
 ### 💻 Hardware Layer
-| Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
-|:--------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
-| Raspberry Pi 5 (A)  | Mid-spec, accessible hub      | SBC       | Raspi OS Lite      | Both    | Eth/WiFi+USB  |
-| Mini PC (B)         | High-spec, costly hub         | Mini PC   | Proxmox            | Both    | Eth/WiFi+USB  |
-| Old PC (C)          | Mid/low-spec, but free        | PC        | Proxmox            | Both    | Eth/WiFi+USB  |
-| Zigbee Coordinator  | Sensor & trigger connectivity | Dongle    | Pass-through       | N/A     | /dev/ttyACM0  |
-| Raspberry Pi 0 2W   | Core services fallback hub    | SBC       | dietpi             | CLI     | WiFi          |
-| HDD/NVMe/SSD        | Shared storage with redunancy | DAS       | mount/fstab/samba  | Both    | USB/Eth       |
+| Name                  | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
+|:----------------------|:------------------------------|:----------|:-------------------|:--------|:--------------|
+| Raspberry Pi 5 (A)    | Mid-spec, accessible hub      | SBC       | Raspi OS Lite      | Both    | Eth/WiFi+USB  |
+| Mini PC (B)           | High-spec, costly hub         | Mini PC   | Proxmox            | Both    | Eth/WiFi+USB  |
+| Old PC (C)            | Mid/low-spec, but free        | PC        | Proxmox            | Both    | Eth/WiFi+USB  |
+| Zigbee Coordinator    | Sensor & trigger connectivity | Dongle    | Pass-through       | N/A     | /dev/ttyACM0  |
+| Raspberry Pi Zero 2 W | Core services fallback hub    | SBC       | dietpi             | CLI     | WiFi          |
+| HDD/NVMe/SSD          | Shared storage with redunancy | DAS       | mount/fstab/samba  | Both    | USB/Eth       |
 
 ### 🛜 Network Layer
 | Name                | Purpose                       | Type      | Config             | GUI/CLI | Port(s)       |
@@ -95,7 +95,9 @@ Are you looking for a privacy-focused, self-hosted, smart home system?
 ## ⚠️ Prerequisites
 
 ### Hardware
-Coming soon!
+
+- **Raspberry Pi 5** | Coming soon!
+- **Raspberry Pi Zero 2 W** | Coming soon!
 
 ### Runtipi
 This repository includes a collection of third-party container applications ("apps") designed exclusively for use with [Runtipi.io](https://runtipi.io/).
@@ -114,7 +116,10 @@ This repository includes a collection of third-party container applications ("ap
 ## 🛠️ Installation
 
 ### Services
-Coming soon!
+
+- **Caddy** | Coming soon!
+- **openHAB** | Coming soon!
+- **Tailscale** | Coming soon!
 
 ### Apps (Containers)
 1. In the Runtipi dashboard, open `Settings` and go to the `App Stores` tab.
@@ -122,7 +127,7 @@ Coming soon!
 3. You can now go to the `App Store` page and select the one you just created from the dropdown.
 
 ### Cron
-Coming soon!
+- **acme.sh** | Coming soon!
 
 ---
 
