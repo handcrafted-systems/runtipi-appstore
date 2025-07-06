@@ -7,11 +7,11 @@ Are you looking for a privacy-focused, self-hosted, smart home system?
 ## 🚀 Table of Contents
 - ✨ [Features](#-features)
 - 🔍 [Overview](#-overview)
-- ⚠️ [Prerequisites](#-prerequisites)
-- 🛠️ [Installation](#-installation)
+- ⚠️ [Prerequisites](#️-prerequisites)
+- 🛠️ [Installation](#️-installation)
 - ❓ [FAQ](#-faq)
 - 🙏 [Acknowledgements](#-acknowledgements)
-- 🏗️ [Built With](#-built-with)
+- 🏗️ [Built With](#️-built-with)
 - 💬 [Contact](#-contact)
 
 ---
@@ -129,7 +129,7 @@ Coming soon!
 ## ❓ FAQ
 
 **Q: How do I get started?**  
-A: Clear the [prerequisites](#-prerequisites) then follow the [installation](#️-installation) instructions.
+A: Clear the [prerequisites](#️-prerequisites) then follow the [installation](#️-installation) instructions.
 
 **Q: How is my data handled?**
 A: All data is fully controlled & secured by you through the steps noted above. Third-party access is restricted by default & remote support is only available if you choose to add it.
