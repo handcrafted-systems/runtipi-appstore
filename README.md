@@ -180,4 +180,4 @@ A: See the [official website & documentation](https://runtipi.io/) and the [Runt
 
 ---
 
-Made with ❤️😅☕ from Bengaluru
+Made with ❤️😅☕ in Bengaluru
