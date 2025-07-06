@@ -136,10 +136,10 @@ This repository includes a collection of third-party container applications ("ap
 **Q: How do I get started?**  
 A: Clear the [prerequisites](#️-prerequisites) then follow the [installation](#️-installation) instructions.
 
-**Q: How is my data handled?**
+**Q: How is my data handled?**  
 A: All data is fully controlled & secured by you through the steps noted above. Third-party access is restricted by default & remote support is only available if you choose to add it.
 
-**Q: How will this help me?**
+**Q: How will this help me?**  
 A: Whether you're looking for comfort at home, convenience on the go or the ability to have full control of your choices, data and privacy, this is a great way to avchieve it.
 
 **Q: How can I request a new tool/service/app?**  
@@ -164,16 +164,18 @@ A: See the [official website & documentation](https://runtipi.io/) and the [Runt
 
 - Ansible
 - Runtipi | openHAB
-- Docker & GitHub Containers
+- Docker, GitHub & LinuxServer Containers
 - GitHub Actions | Renovate 
-- VS Code | Copilot | Gemini
-- Tmux | zsh | oh-my-posh
 - YAML | JSON | Markdown
+- Tmux | zsh | oh-my-posh
+- VS Code | Copilot | Gemini
 
 ---
 
 ## 💬 Contact
 
+- 💭 Create a new Discussion here on the repo
+- ❓ Create a new Issue here on the repo
 - 📧 Reach out to us via email: hello at handcrafted dot systems
 
 ---
