@@ -1,6 +1,6 @@
 services:
   eclipse-mosquitto:
-    image: eclipse-mosquitto:2.0.21
+    image: eclipse-mosquitto:2.0.22
     container_name: eclipse-mosquitto
     environment:
       - TZ=${TZ}
