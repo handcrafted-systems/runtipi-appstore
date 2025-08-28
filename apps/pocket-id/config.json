@@ -4,8 +4,8 @@
   "available": true,
   "exposable": true,
   "dynamic_config": true,
-  "tipi_version": 11,
-  "version": "v1.6.4",
+  "tipi_version": 12,
+  "version": "v1.10.0",
   "port": 8387,
   "categories": [
     "security"
@@ -29,6 +29,6 @@
     "amd64"
   ],
   "created_at": 1746731782218,
-  "updated_at": 1753154765459,
+  "updated_at": 1756349965847,
   "$schema": "../app-info-schema.json"
 }
